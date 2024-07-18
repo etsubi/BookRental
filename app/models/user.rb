@@ -15,7 +15,7 @@ class User < ApplicationRecord
     end
   
     def password_present?
-      password.present?  # Corrected method to check presence of password
+      password.present? 
     end
   end
   

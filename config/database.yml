@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres@123
+  host: localhost
+  port: 5433 
+
+development:
+  <<: *default
+  database: booklend_development
+
+test:
+  <<: *default
+  database: booklend_test
+
+production:
+  <<: *default
+  database: booklend_production
+  username: booklend
+  password: <%= ENV['BOOKLEND_DATABASE_PASSWORD'] %>
